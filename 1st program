@@ -1,0 +1,81 @@
+#include <iostream>
+using namespace std;
+
+int size = 0;
+const int MAX = 10;
+
+struct stack {
+int items[MAX];
+int TOP;
+};
+typedef struct stack st;
+void createemptystack(st *s) {
+ s->TOP = -1
+ }
+ int isfull(st *s, int MAX) {
+ if ( s->TOP == MAX - 1 ) {
+   return 1;
+   }
+ else {
+   return 0;
+   }
+   int isempty(st *s, int MAX) {
+ if ( s->TOP == -1 ) {
+   return 1;
+   }
+ else {
+   return 0;
+   }
+   
+   int push(st *s, int newitem) {
+   if ( int isfull(st *s) ) {
+   cout << " stack full" <<endl;
+   }
+   else {
+   s->TOP++;
+       s->TOP = newitem;
+    }
+    size++;
+    }
+    
+    void pop(st *s, int items) {
+   if ( int empty(st *s) ) {
+   cout << " stack full" <<endl;
+   }
+   else {
+   s->TOP++;
+       cout << "items popped" << s->items[s->TOP]<<endl;
+    }
+    size++;
+    }
+    
+    void printstack(int items, int size) {
+    cout <<"  stack :  " <<endl;
+    for(int i =o; i < size; i++) {
+       cout << s->items[i]<<endl;
+      }
+      
+      int main() {
+      st *s = (st *)malloc(sizeof(st));
+      createemptystack(s);
+      push(s, 1);
+      push(s, 2);
+      push(s, 3);
+      push(s, 4);
+      
+      printstack(s);
+      
+      pop(s, 4);
+      
+      cout <<"after popping out <<endl;
+      
+      printstack(s);
+      
+      return 0;
+      
+      }
+      
+      
+  
+      
+   
